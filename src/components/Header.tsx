@@ -4,10 +4,10 @@ import styled from "styled-components";
 
 const Base = styled.header`
   width: 100%;
-  height: 40px;
+  height: 100px;
   position: fixed;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
   background-color: #444444;
   display: flex;
   justify-content: space-between;
@@ -30,11 +30,11 @@ const Navbar = styled.nav`
   display: flex;
   align-items: center;
 `;
-const NavLink = styled.button`
+const NavBtn = styled.button`
   padding: 10px 15px;
   cursor: pointer;
   &:hover {
-    background-color: #666666;
+    color: tomato;
   }
 `;
 
@@ -47,10 +47,10 @@ function Header() {
         <LogoText>Kazuya Hanamoto</LogoText>
       </LogoArea>
       <Navbar>
-        <NavLink onClick={() => setPage("TOP")}>TOP</NavLink>
-        <NavLink onClick={() => setPage("PROFILE")}>PROFILE</NavLink>
-        <NavLink onClick={() => setPage("PRODUCTS")}>PRODUCTS</NavLink>
-        <NavLink onClick={() => setPage("CONTACT")}>CONTACT</NavLink>
+        <NavBtn onClick={() => setPage("TOP")}>TOP</NavBtn>
+        <NavBtn onClick={() => setPage("PROFILE")}>PROFILE</NavBtn>
+        <NavBtn onClick={() => setPage("PRODUCTS")}>PRODUCTS</NavBtn>
+        <NavBtn onClick={() => setPage("CONTACT")}>CONTACT</NavBtn>
       </Navbar>
     </Base>
   );

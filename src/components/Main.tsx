@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import AppContext from "../contexts/AppContext";
-import { Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 import Top from "./Top";
 import Profile from "./Profile";
@@ -8,8 +7,8 @@ import Products from "./Products";
 import Contact from "./Contact";
 
 const Base = styled.div`
-  transform: translateY(40px);
-  padding: 15px;
+  transform: translateY(100px);
+  height: calc(100vh - 100px);
 `;
 
 function Main() {

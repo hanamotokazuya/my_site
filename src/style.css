@@ -5,4 +5,44 @@ body,
 #root {
   background-color: rgb(56, 51, 51);
   color: white;
+  height: 100%;
+}
+
+.top-content-band-anime {
+  animation-name: band-anime;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  height: 0%;
+}
+
+@keyframes band-anime {
+  0% {
+    height: 0%;
+  }
+  30% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.top-content-message-anime {
+  display: inline-block;
+  animation-name: message-anime;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  transform: translateY(64px);
+}
+
+@keyframes message-anime {
+  0% {
+    transform: translateY(80px);
+  }
+  40% {
+    transform: translateY(80px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
