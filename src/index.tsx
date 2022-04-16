@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
+import "./style.css";
+import App from "./components/App";
 
 document.addEventListener("DOMContentLoaded", () => {
   const rootElement = document.querySelector("#root");
@@ -8,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const root = ReactDOM.createRoot(rootElement);
   root.render(
     <Router>
-      <h1>Hello, React.</h1>
+      <App />
     </Router>
   );
 });
