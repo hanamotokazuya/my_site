@@ -1,16 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-const Base = styled.div`
-  background-color: blue;
-  padding: 15px;
-`;
-const Section = styled.div`
+const Base = styled.div``;
+const Title = styled.h2`
   font-size: 32px;
   border-bottom: 1px solid;
   margin-bottom: 10px;
 `;
-const Item = styled.div`
+const Item = styled.h3`
   margin-bottom: 10px;
   font-size: 20px;
   font-weight: bold;
@@ -23,7 +20,7 @@ const ItemDescription = styled.div`
 function Profile() {
   return (
     <Base>
-      <Section>About me</Section>
+      <Title>About me</Title>
       <Item>氏名</Item>
       <ItemDescription>花本　和也</ItemDescription>
       <Item>生年月日</Item>

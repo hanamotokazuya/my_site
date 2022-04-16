@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import AppContext from "../contexts/AppContext";
 import styled from "styled-components";
 
 const Base = styled.header`
@@ -29,7 +30,7 @@ const Navbar = styled.nav`
   display: flex;
   align-items: center;
 `;
-const NavLink = styled.div`
+const NavLink = styled.button`
   padding: 10px 15px;
   cursor: pointer;
   &:hover {
@@ -38,6 +39,7 @@ const NavLink = styled.div`
 `;
 
 function Header() {
+  const { setPage } = useContext(AppContext);
   return (
     <Base>
       <LogoArea>
@@ -45,11 +47,10 @@ function Header() {
         <LogoText>Kazuya Hanamoto</LogoText>
       </LogoArea>
       <Navbar>
-        <NavLink>TOP</NavLink>
-        <NavLink>PROFILE</NavLink>
-        <NavLink>HISTORY</NavLink>
-        <NavLink>PRODUCTS</NavLink>
-        <NavLink>CONTACT</NavLink>
+        <NavLink onClick={() => setPage("TOP")}>TOP</NavLink>
+        <NavLink onClick={() => setPage("PROFILE")}>PROFILE</NavLink>
+        <NavLink onClick={() => setPage("PRODUCTS")}>PRODUCTS</NavLink>
+        <NavLink onClick={() => setPage("CONTACT")}>CONTACT</NavLink>
       </Navbar>
     </Base>
   );

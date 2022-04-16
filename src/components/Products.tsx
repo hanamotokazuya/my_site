@@ -1,10 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Base = styled.div`
-  padding: 15px;
-  background-color: cyan;
-`;
+const Base = styled.div``;
 const Product = styled.div`
   display: flex;
   flex-direction: column;
