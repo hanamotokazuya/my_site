@@ -6,6 +6,7 @@ import Products from "./Products";
 import Contact from "./Contact";
 
 const Base = styled.div`
+  transform: translateY(40px);
   background-color: tomato;
 `;
 

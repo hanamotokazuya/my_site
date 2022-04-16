@@ -2,15 +2,17 @@ import React from "react";
 import styled from "styled-components";
 
 const Base = styled.header`
+  width: 100%;
+  height: 40px;
+  position: fixed;
   padding-left: 10px;
   padding-right: 10px;
-  border: 1px solid;
-  border-color: green;
+  background-color: #444444;
   display: flex;
   justify-content: space-between;
+  z-index: 10;
 `;
 const LogoArea = styled.div`
-  background-color: #444444;
   display: flex;
   align-items: center;
 `;
@@ -29,11 +31,9 @@ const Navbar = styled.nav`
 `;
 const NavLink = styled.div`
   padding: 10px 15px;
-  border: 1px solid;
-  border-color: blue;
   cursor: pointer;
   &:hover {
-    background-color: #444444;
+    background-color: #666666;
   }
 `;
 
