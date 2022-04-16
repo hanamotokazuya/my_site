@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Top from "./Top";
 import Profile from "./Profile";
-import History from "./History";
 import Products from "./Products";
 import Contact from "./Contact";
 
@@ -15,7 +14,6 @@ function Main() {
     <Base>
       <Top />
       <Profile />
-      <History />
       <Products />
       <Contact />
     </Base>

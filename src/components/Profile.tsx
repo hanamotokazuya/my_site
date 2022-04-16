@@ -11,7 +11,6 @@ const Section = styled.div`
   margin-bottom: 10px;
 `;
 const Item = styled.div`
-  margin-left: 15px;
   margin-bottom: 10px;
   font-size: 20px;
   font-weight: bold;
