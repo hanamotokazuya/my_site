@@ -1,3 +1,5 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 module.exports = {
   mode: "development",
   entry: "./src/index.tsx",
@@ -17,6 +19,11 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js", ".json"],
   },
   target: ["web", "es5"],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: `${__dirname}/src/index.html`,
+    }),
+  ],
   devServer: {
     static: "dist",
     open: true,
