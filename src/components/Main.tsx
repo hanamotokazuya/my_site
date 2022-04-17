@@ -39,7 +39,7 @@ function Main() {
 export default Main;
 
 const Base = styled.div`
-  transform: translateY(100px);
+  padding-top: 100px;
   height: calc(100vh - 100px);
   &.fade-enter {
     opacity: 0;

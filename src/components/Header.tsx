@@ -1,6 +1,27 @@
 import React, { useContext } from "react";
 import AppContext from "../contexts/AppContext";
 import styled from "styled-components";
+import logoImg from "../imgs/my-logo.png";
+
+function Header() {
+  const { setPage } = useContext(AppContext);
+  return (
+    <Base>
+      <LogoArea>
+        <Logo src={logoImg} />
+        <LogoText>Kazuya&#39;s portfolio</LogoText>
+      </LogoArea>
+      <Navbar>
+        <NavBtn onClick={() => setPage("TOP")}>TOP</NavBtn>
+        <NavBtn onClick={() => setPage("PROFILE")}>PROFILE</NavBtn>
+        <NavBtn onClick={() => setPage("PRODUCTS")}>PRODUCTS</NavBtn>
+        <NavBtn onClick={() => setPage("CONTACT")}>CONTACT</NavBtn>
+      </Navbar>
+    </Base>
+  );
+}
+
+export default Header;
 
 const Base = styled.header`
   width: 100%;
@@ -21,7 +42,6 @@ const Logo = styled.img`
   width: 32px;
   height: 32px;
   margin-right: 15px;
-  background-color: blue;
 `;
 const LogoText = styled.p`
   font-weight: bold;
@@ -37,23 +57,3 @@ const NavBtn = styled.button`
     color: tomato;
   }
 `;
-
-function Header() {
-  const { setPage } = useContext(AppContext);
-  return (
-    <Base>
-      <LogoArea>
-        <Logo></Logo>
-        <LogoText>Kazuya Hanamoto</LogoText>
-      </LogoArea>
-      <Navbar>
-        <NavBtn onClick={() => setPage("TOP")}>TOP</NavBtn>
-        <NavBtn onClick={() => setPage("PROFILE")}>PROFILE</NavBtn>
-        <NavBtn onClick={() => setPage("PRODUCTS")}>PRODUCTS</NavBtn>
-        <NavBtn onClick={() => setPage("CONTACT")}>CONTACT</NavBtn>
-      </Navbar>
-    </Base>
-  );
-}
-
-export default Header;

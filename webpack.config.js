@@ -29,6 +29,11 @@ module.exports = {
         loader: "file-loader",
         options: {},
       },
+      {
+        test: /\.json$/,
+        loader: "json-loader",
+        type: "javascript/auto",
+      },
     ],
   },
   resolve: {
