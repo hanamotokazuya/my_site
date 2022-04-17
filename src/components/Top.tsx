@@ -1,40 +1,29 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Transition, TransitionStatus } from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 
 function Top() {
   const [isHover, setIsHover] = useState(false);
-  const transitionStyle = {
-    entering: {
-      transition: "all 1s ease",
-      width: "500px",
-    },
-    entered: {},
-    exiting: {
-      transition: "all 1s ease",
-      width: "15px",
-    },
-    exited: {},
-  };
+
   return (
     <Base>
       <Content onMouseOver={() => setIsHover(true)} onMouseOut={() => setIsHover(false)}>
-        <Transition in={isHover} timeout={1000}>
-          {(state) => <ContentBand state={state} className="top-content-band-anime" />}
-        </Transition>
+        <CSSTransition in={isHover} timeout={1000} classNames="band">
+          <ContentBand className="top-content-band-anime" />
+        </CSSTransition>
         <ContentWrapper>
           <TopMessage>
-            <TopMessageBlock>
+            <div className="top-message-block">
               <span className="top-content-message-anime">生涯続けたいこと、</span>
-            </TopMessageBlock>
+            </div>
             <br />
-            <TopMessageBlock>
+            <div className="top-message-block">
               <span className="top-content-message-anime">それは学び続けること。</span>
-            </TopMessageBlock>
+            </div>
           </TopMessage>
-          <AutherBlock>
-            <Auther className="top-content-message-anime">Kazuya Hanamoto</Auther>
-          </AutherBlock>
+          <Auther>
+            <p className="top-content-message-anime auther">Kazuya Hanamoto</p>
+          </Auther>
         </ContentWrapper>
       </Content>
     </Base>
@@ -55,12 +44,31 @@ const Content = styled.div`
   min-height: 260px;
   position: relative;
 `;
-const ContentBand = styled.div<{ state: TransitionStatus }>`
+const ContentBand = styled.div`
   position: absolute;
   height: 100%;
   background-color: tomato;
-  transition: 0.2s;
-  width: ${({ state }) => (state === "entering" || state === "entered" ? "100%" : "15px")};
+  width: 15px;
+  &.band-enter {
+    width: 15px;
+  }
+  &.band-enter-active {
+    width: 100%;
+    transition: width 0.2s;
+  }
+  &.band-enter-done {
+    width: 100%;
+  }
+  &.band-exit {
+    width: 100%;
+  }
+  &.band-exit-active {
+    width: 15px;
+    transition: width 0.2s;
+  }
+  &.band-exit-done {
+    width: 15px;
+  }
 `;
 const ContentWrapper = styled.div`
   height: 100%;
@@ -72,17 +80,17 @@ const ContentWrapper = styled.div`
 const TopMessage = styled.h1`
   font-size: 64px;
   line-height: 1.8;
+  .top-message-block {
+    display: inline-block;
+    overflow: hidden;
+    height: 80px;
+  }
 `;
-const TopMessageBlock = styled.div`
-  display: inline-block;
-  overflow: hidden;
-  height: 80px;
-`;
-const AutherBlock = styled.div`
+const Auther = styled.div`
   display: inline-block;
   overflow: hidden;
   height: 50px;
-`;
-const Auther = styled.p`
-  font-size: 20px;
+  .auther {
+    font-size: 20px;
+  }
 `;

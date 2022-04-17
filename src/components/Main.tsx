@@ -5,15 +5,11 @@ import Top from "./Top";
 import Profile from "./Profile";
 import Products from "./Products";
 import Contact from "./Contact";
-
-const Base = styled.div`
-  transform: translateY(100px);
-  height: calc(100vh - 100px);
-`;
+import { CSSTransition, SwitchTransition } from "react-transition-group";
 
 function Main() {
   const { page } = useContext(AppContext);
-  let currentPage = <></>;
+  let currentPage: JSX.Element = <></>;
   switch (page) {
     case "TOP":
       currentPage = <Top />;
@@ -31,7 +27,38 @@ function Main() {
       currentPage = <Top />;
       break;
   }
-  return <Base>{currentPage}</Base>;
+  return (
+    <SwitchTransition>
+      <CSSTransition key={page} timeout={1000} classNames="fade">
+        <Base>{currentPage}</Base>
+      </CSSTransition>
+    </SwitchTransition>
+  );
 }
 
 export default Main;
+
+const Base = styled.div`
+  transform: translateY(100px);
+  height: calc(100vh - 100px);
+  &.fade-enter {
+    opacity: 0;
+  }
+  &.fade-enter-active {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+  &.fade-enter-done {
+    opacity: 1;
+  }
+  &.fade-exit {
+    opacity: 1;
+  }
+  &.fade-exit-active {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  &.fade-exti-done {
+    opacity: 0;
+  }
+`;
