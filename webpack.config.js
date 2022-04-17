@@ -24,6 +24,11 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|jpg|jpeg|gif)$/,
+        loader: "file-loader",
+        options: {},
+      },
     ],
   },
   resolve: {
