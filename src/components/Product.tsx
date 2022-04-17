@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { tab, sp } from "../utils/media";
 
 type Props = Product & { srcImg: string };
 function Product({ title, description, srcImg, siteUrl, srcCodeUrl }: Props) {
@@ -27,11 +28,24 @@ const Item = styled.section`
   display: flex;
   gap: 20px;
   padding: 15px 50px;
+  ${tab`
+    gap: 20px;
+    padding: 15px 30px;
+  `}
+  ${sp`
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 10px;
+  `}
   a {
     cursor: pointer;
   }
   .item-img-box {
     width: 35%;
+    ${sp`
+    width: 90%;
+  `}
   }
   .item-img {
     width: 100%;
@@ -42,6 +56,9 @@ const Item = styled.section`
     padding-top: 10px;
     display: flex;
     flex-direction: column;
+    ${sp`
+      width: 90%;
+    `}
   }
   .title {
     font-size: 20px;

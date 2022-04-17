@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import AppContext from "../contexts/AppContext";
 import styled from "styled-components";
 import logoImg from "../imgs/my-logo.png";
-import { pc, tab, sp } from "../utils/media";
+import { tab, sp } from "../utils/media";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { CSSTransition } from "react-transition-group";
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { CSSTransition } from "react-transition-group";
+import { tab, sp } from "../utils/media";
 
 function Top() {
   const [isHover, setIsHover] = useState(false);
@@ -80,17 +81,43 @@ const ContentWrapper = styled.div`
 const TopMessage = styled.h1`
   font-size: 64px;
   line-height: 1.8;
+  ${tab`
+      font-size: 32px;
+      line-height: 1.4;
+    `}
+  ${sp`
+      font-size: 24px;
+      line-height: 1.2;
+    `}
   .top-message-block {
     display: inline-block;
     overflow: hidden;
     height: 80px;
+    ${tab`
+      height: 40px;
+    `}
+    ${sp`
+      height: 30px;
+    `}
   }
 `;
 const Auther = styled.div`
   display: inline-block;
   overflow: hidden;
   height: 50px;
+  ${tab`
+      height: 20px;
+    `}
+  ${sp`
+      height: 20px;
+    `}
   .auther {
     font-size: 20px;
+    ${tab`
+      font-size: 16px;
+    `}
+    ${sp`
+      font-size: 12px;
+    `}
   }
 `;

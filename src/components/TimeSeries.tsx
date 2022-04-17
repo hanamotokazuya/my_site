@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { tab, sp } from "../utils/media";
 
 type Prop = {
   contents: Profile[];
@@ -36,6 +37,12 @@ const Base = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  ${tab`
+    margin-left: 50px;
+  `}
+  ${sp`
+    margin-left: 20px;
+  `}
   .component {
     width: 100%;
     height: 200px;

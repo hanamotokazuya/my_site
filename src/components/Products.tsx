@@ -4,6 +4,7 @@ import Product from "./Product";
 import productImage1 from "../imgs/purchased-book-app.png";
 import productImage2 from "../imgs/my-site.png";
 import data from "../json/products.json";
+import { tab, sp } from "../utils/media";
 
 function Products() {
   const products: Product[] = data["data"];
@@ -33,4 +34,12 @@ const PageTitle = styled.h2`
   margin-bottom: 10px;
   padding-top: 10px;
   padding-left: 50px;
+  ${tab`
+    font-size: 24px;
+    padding-left: 30px;
+  `}
+  ${sp`
+    font-size: 24px;
+    padding-left: 10px;
+  `}
 `;

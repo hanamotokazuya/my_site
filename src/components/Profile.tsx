@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { CSSTransition } from "react-transition-group";
 import TimeSeries from "./TimeSeries";
 import data from "../json/profile.json";
+import { tab, sp } from "../utils/media";
 
 function Profile() {
   const [isOpenText, setIsOpenText] = useState(false);
@@ -43,6 +44,14 @@ const PageTitle = styled.h2`
   margin-bottom: 10px;
   padding-top: 10px;
   padding-left: 50px;
+  ${tab`
+    font-size: 24px;
+    padding-left: 30px;
+  `}
+  ${sp`
+    font-size: 24px;
+    padding-left: 10px;
+  `}
 `;
 const Content = styled.div`
   position: fixed;
@@ -55,22 +64,47 @@ const Content = styled.div`
   border-radius: 8px;
   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
   z-index: 2;
+  ${tab`
+      width: 60%;
+  `}
+  ${sp`
+      width: 80%;
+  `}
   .title {
     font-size: 26px;
     color: black;
     font-weight: bold;
     margin-bottom: 20px;
+    ${tab`
+      font-size: 20px;
+      margin-bottom: 10px;
+    `}
+    ${sp`
+      font-size: 20px;
+      margin-bottom: 8px;
+    `}
   }
   .text {
     font-size: 16px;
     line-height: 1.5;
     color: #444444;
     margin-bottom: 20px;
+    ${tab`
+      font-size: 16px;
+      margin-bottom: 10px;
+    `}
+    ${sp`
+      font-size: 14px;
+      margin-bottom: 8px;
+    `}
   }
   .close {
     display: inline-block;
     font-size: 16px;
     color: tomato;
+    ${sp`
+      font-size: 14px;
+    `}
   }
 `;
 const Shadow = styled.div`

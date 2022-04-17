@@ -6,6 +6,7 @@ import Profile from "./Profile";
 import Products from "./Products";
 import Contact from "./Contact";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
+import { tab, sp } from "../utils/media";
 
 function Main() {
   const { page } = useContext(AppContext);
@@ -41,6 +42,14 @@ export default Main;
 const Base = styled.div`
   padding-top: 100px;
   height: calc(100vh - 100px);
+  ${tab`
+    padding-top: 50px;
+    height: calc(100vh - 50px);
+  `}
+  ${sp`
+    padding-top: 40px;
+    height: calc(100vh - 40px);
+  `}
   &.fade-enter {
     opacity: 0;
   }
