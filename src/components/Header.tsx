@@ -147,6 +147,10 @@ const Hamburger = styled.div`
     z-index: 2;
     li {
       margin-bottom: 20px;
+      cursor: pointer;
+      &:hover {
+        color: tomato;
+      }
     }
     &.slide-enter {
       right: -50%;
