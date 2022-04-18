@@ -20,7 +20,6 @@ function Header() {
           <li onClick={() => setPage("TOP")}>TOP</li>
           <li onClick={() => setPage("PROFILE")}>PROFILE</li>
           <li onClick={() => setPage("PRODUCTS")}>PRODUCTS</li>
-          <li onClick={() => setPage("CONTACT")}>CONTACT</li>
         </ul>
       </Nav>
       <Hamburger>
@@ -50,14 +49,6 @@ function Header() {
               }}
             >
               PRODUCTS
-            </li>
-            <li
-              onClick={() => {
-                setIsOpenHam(!isOpenHam);
-                setPage("CONTACT");
-              }}
-            >
-              CONTACT
             </li>
           </ul>
         </CSSTransition>

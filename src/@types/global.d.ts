@@ -1,4 +1,4 @@
-type Page = "TOP" | "PROFILE" | "PRODUCTS" | "CONTACT";
+type Page = "TOP" | "PROFILE" | "PRODUCTS";
 
 type Profile = {
   id: number;

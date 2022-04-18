@@ -4,7 +4,6 @@ import styled from "styled-components";
 import Top from "./Top";
 import Profile from "./Profile";
 import Products from "./Products";
-import Contact from "./Contact";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import { tab, sp } from "../utils/media";
 
@@ -20,9 +19,6 @@ function Main() {
       break;
     case "PRODUCTS":
       currentPage = <Products />;
-      break;
-    case "CONTACT":
-      currentPage = <Contact />;
       break;
     default:
       currentPage = <Top />;
