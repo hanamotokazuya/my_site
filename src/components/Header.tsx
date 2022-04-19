@@ -28,7 +28,7 @@ function Header() {
           <ul className="menu">
             <li
               onClick={() => {
-                setIsOpenHam(!isOpenHam);
+                setIsOpenHam(false);
                 setPage("TOP");
               }}
             >
@@ -36,7 +36,7 @@ function Header() {
             </li>
             <li
               onClick={() => {
-                setIsOpenHam(!isOpenHam);
+                setIsOpenHam(false);
                 setPage("PROFILE");
               }}
             >
@@ -44,7 +44,7 @@ function Header() {
             </li>
             <li
               onClick={() => {
-                setIsOpenHam(!isOpenHam);
+                setIsOpenHam(false);
                 setPage("PRODUCTS");
               }}
             >
@@ -53,7 +53,7 @@ function Header() {
           </ul>
         </CSSTransition>
         <CSSTransition in={isOpenHam} timeout={600} classNames="shadow" unmountOnExit>
-          <Shadow onClick={() => setIsOpenHam(!isOpenHam)} />
+          <Shadow onClick={() => setIsOpenHam(false)} />
         </CSSTransition>
       </Hamburger>
     </Base>

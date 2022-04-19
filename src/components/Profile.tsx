@@ -13,22 +13,21 @@ function Profile() {
     <>
       <PageTitle>About me</PageTitle>
       <TransitionStyle>
-        <CSSTransition in={isOpenText} timeout={600} classNames="content" unmountOnExit>
+        <CSSTransition in={isOpenText} timeout={300} classNames="content" unmountOnExit>
           <Content>
             <h3 className="title">{contents[contentNum].title}</h3>
             <p className="text">{contents[contentNum].text}</p>
-            <div className="close" onClick={() => setIsOpenText(!isOpenText)}>
+            <div className="close" onClick={() => setIsOpenText(false)}>
               CLOSE
             </div>
           </Content>
         </CSSTransition>
-        <CSSTransition in={isOpenText} timeout={600} classNames="shadow" unmountOnExit>
-          <Shadow onClick={() => setIsOpenText(!isOpenText)} />
+        <CSSTransition in={isOpenText} timeout={300} classNames="shadow" unmountOnExit>
+          <Shadow onClick={() => setIsOpenText(false)} />
         </CSSTransition>
       </TransitionStyle>
       <TimeSeries
         contents={contents}
-        isOpenText={isOpenText}
         setIsOpenText={setIsOpenText}
         setContentNum={setContentNum}
       />
@@ -102,6 +101,7 @@ const Content = styled.div`
     display: inline-block;
     font-size: 16px;
     color: tomato;
+    cursor: pointer;
     ${sp`
       font-size: 14px;
     `}

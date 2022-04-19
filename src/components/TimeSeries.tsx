@@ -4,11 +4,10 @@ import { tab, sp } from "../utils/media";
 
 type Prop = {
   contents: Profile[];
-  isOpenText: boolean;
   setIsOpenText: React.Dispatch<React.SetStateAction<boolean>>;
   setContentNum: React.Dispatch<React.SetStateAction<number>>;
 };
-function TimeSeries({ contents, isOpenText, setIsOpenText, setContentNum }: Prop) {
+function TimeSeries({ contents, setIsOpenText, setContentNum }: Prop) {
   return (
     <Base>
       {contents.map(({ id, title, year }) => (
@@ -18,7 +17,7 @@ function TimeSeries({ contents, isOpenText, setIsOpenText, setContentNum }: Prop
             className="point"
             onClick={() => {
               setContentNum(id);
-              setIsOpenText(!isOpenText);
+              setIsOpenText(true);
             }}
           />
           <h3 className="title">{title}</h3>
