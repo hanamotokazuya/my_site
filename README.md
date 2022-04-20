@@ -1,8 +1,7 @@
 # ポートフォリオサイト
 自身の経歴や制作物をまとめたサイトです。<br>
 
-![my-site](https://user-images.githubusercontent.com/39664960/164202693-ff6ab254-1bc3-493a-8bb2-54e4180e745a.png)
-
+![my-site](https://user-images.githubusercontent.com/39664960/164229548-e965d1d3-5f12-437b-84d4-413ab662b3e2.png)
 # URL
 [https://kah-site.netlify.app/](https://kah-site.netlify.app/)
 
