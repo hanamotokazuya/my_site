@@ -1,6 +1,12 @@
 {
   "data": [
     {
+      "title": "マインスイーパー",
+      "description": "Next.js, tailwindcss, jestの勉強を兼ねて制作しました。サーバはVercelを利用しています。",
+      "siteUrl": "https://minesweeper-vert.vercel.app/",
+      "srcCodeUrl": "https://github.com/hanamotokazuya/minesweeper"
+    },
+    {
       "title": "書籍管理アプリ",
       "description": "初めて作った作品です。私は気になる技術の参考書籍を読むことが好きで、毎年20冊以上読んでいます。いままで、買った書籍を管理して可視化できるアプリがあったらいいなと思い制作しました。フロントエンドはReact/TypeScriptのSPA、バックエンドはRuby on Railsで構築しています。具体的にはRailsのView層にWebpackerでReactをバンドルし、erbなどのテンプレートから呼び出して使う構成で制作しています。サーバはHeroku、ストレージはS3を利用しています。",
       "siteUrl": "https://purchased-book-app.herokuapp.com/",
