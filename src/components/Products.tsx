@@ -4,12 +4,13 @@ import Product from "./Product";
 import productImage1 from "../imgs/my-site.png";
 import productImage2 from "../imgs/purchased-book-app.png";
 import productImage3 from "../imgs/minesweeper.png";
+import productImage4 from "../imgs/simulink_clone.png";
 import data from "../json/products.json";
 import { tab, sp } from "../utils/media";
 
 function Products() {
   const products: Product[] = data["data"];
-  const productImages: string[] = [productImage3, productImage2, productImage1];
+  const productImages: string[] = [productImage4, productImage3, productImage2, productImage1];
   return (
     <>
       <PageTitle>Products</PageTitle>

@@ -1,6 +1,12 @@
 {
   "data": [
     {
+      "title": "Simulink Clone",
+      "description": "モデルベースデザインのためのブロック線図環境を提供するソフトウェアSimulinkのクローンサイトです。ブラウザ上でSimulinkのようにブロック線図を設計し、シミュレーションによる解析が行えます。Simulinkは有償ソフトウェアであり、Webには対応していないことから、Simulinkのようなソフトウェアで無料かつWeb対応のものがあると便利だと思い制作しました。",
+      "siteUrl": "https://simulink-clone.vercel.app/",
+      "srcCodeUrl": "https://github.com/hanamotokazuya/simulink-clone"
+    },
+    {
       "title": "マインスイーパー",
       "description": "Next.js, tailwindcss, jestの勉強を兼ねて制作しました。サーバはVercelを利用しています。",
       "siteUrl": "https://minesweeper-vert.vercel.app/",
