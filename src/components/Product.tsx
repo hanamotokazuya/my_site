@@ -11,11 +11,15 @@ function Product({ title, description, srcImg, siteUrl, srcCodeUrl }: Props) {
       </a>
       <div className="content">
         <h3 className="title">{title}</h3>
-        <p className="description">{description}</p>
+        {description.map((line) => (
+          <p>{line}</p>
+        ))}
         {!!srcCodeUrl && (
-          <a href={srcCodeUrl} target="_blank" className="src-code">
-            [ソースコード(GitHub)はこちら]
-          </a>
+          <div className="src-code-wrapper">
+            <a href={srcCodeUrl} target="_blank" className="src-code">
+              [ソースコード(GitHub)はこちら]
+            </a>
+          </div>
         )}
       </div>
     </Item>
@@ -69,9 +73,11 @@ const Item = styled.section`
   .description {
     font-size: 16px;
   }
+  .src-code-wrapper {
+    margin-top: 10px;
+  }
   .src-code {
     font-size: 14px;
-    margin-top: 10px;
     &:hover {
       color: tomato;
     }

@@ -8,7 +8,7 @@ type Profile = {
 };
 type Product = {
   title: string;
-  description: string;
+  description: string[];
   siteUrl: string;
   srcCodeUrl?: string;
 };
